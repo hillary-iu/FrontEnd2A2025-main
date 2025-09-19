@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './Header.module.css';
 import Link from 'next/link';
+import image from 'next/image'
 
 export default function Header() {
     const [show, setShow] = useState(false);
@@ -11,7 +12,8 @@ export default function Header() {
                 <button onClick={() => { setShow(!show) }}>X</button>
                 {show &&
                     <div style={{ height: '200px', border: '2px solid black' }}>
-                        <p>MOBILE</p>
+                        {/*<p>MOBILE</p>*/}
+                        <image src={'/images/criativo-661583cc41a7c.jpg'} height={50} width={50} alt='imagem'> </image>
                     </div>
                 }
             </header>

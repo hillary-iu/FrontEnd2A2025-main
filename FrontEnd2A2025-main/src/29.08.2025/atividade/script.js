@@ -20,15 +20,15 @@ input.addEventListener('change', () => {
     p.textContent = "Sua busca: " + input.value;
 })
 
-// prodAdd.addEventListener('mousemove' , () => {
-//     // console.log('Moveu o mouse!')
-//     let r = parseInt(Math.random() * 255);
-//     let g = parseInt(Math.random() * 255);
-//     let b = parseInt(Math.random() * 255);
-//     let cor = `rgb(${r}, ${g}, ${b})`
-//     console.log(cor);
-//     prodAdd.style.backgroundColor = cor;
-// })
+prodAdd.addEventListener('mousemove' , () => {
+    console.log('Moveu o mouse!')
+        let r = parseInt(Math.random() * 255);
+        let g = parseInt(Math.random() * 255);
+        let b = parseInt(Math.random() * 255);
+        let cor = `rgb(${r}, ${g}, ${b})`
+console.log(cor);
+prodAdd.style.backgroundColor = cor;
+ })
 
 
 lista.forEach((item, i) => { // item são os li

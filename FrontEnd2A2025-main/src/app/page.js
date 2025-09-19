@@ -6,6 +6,7 @@ export default function Home() {
 
   // let cont = 0;
   const [cont, setCont] = useState(0);
+  const[estilo, setEstilo] = useState('colorido')
 
   const subtrair = () => {
     setCont(cont - 1);
@@ -24,6 +25,12 @@ export default function Home() {
       <button onClick={() => { adicionar() }}>Adicionar</button>
       <button onClick={() => { subtrair() }}>Subtrair</button>
       <p>Contagem {cont}</p>
+
+      <button onClick={() => { setEstilo('colorido')}}>Estilo colorido</button>
+      <button onClick={() => { setEstilo('cinza')}}>Estilo cinza</button>
+
+      <div className={`${styles.box} ${estilo === 'colorido' ? styles.colorido : styles.cinza? estilo==='cinza': styles.cinza}`}>
     </div>
+  </div>
   );
 }

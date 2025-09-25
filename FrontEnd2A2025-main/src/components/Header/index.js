@@ -6,14 +6,21 @@ import image from 'next/image'
 
 export default function Header() {
     const [show, setShow] = useState(false);
+    const[icone, setIcone] = useState(/images/pena.png);
+
+    const clique = () => {
+        setShow(!show);
+        setIcone('/images/tresflower.pnj')
+    }
+
     return (
         <>
-            <header>
-                <button onClick={() => { setShow(!show) }}>X</button>
+            <header className={styles.HeaderMobile}>
+                <div onClick={() => { clique() }}>x<image scr={'/imagens/pena.png'} alt='menu' width={30} height={30}></image></div>
                 {show &&
                     <div style={{ height: '200px', border: '2px solid black' }}>
                         {/*<p>MOBILE</p>*/}
-                        <image src={'/images/criativo-661583cc41a7c.jpg'} height={50} width={50} alt='imagem'> </image>
+                        <image src={'pena.png'} height={50} width={50} alt='imagem'></image>
                     </div>
                 }
             </header>

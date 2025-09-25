@@ -6,11 +6,12 @@ import image from 'next/image'
 
 export default function Header() {
     const [show, setShow] = useState(false);
-    const[icone, setIcone] = useState(/images/pena.png);
+    const[icone, setIcone] = useState(/images/open.png);
 
     const clique = () => {
+        (show! setIcone('/images/open.pnj') : setIcone ('ima')
         setShow(!show);
-        setIcone('/images/tresflower.pnj')
+        
     }
 
     return (

@@ -33,6 +33,11 @@
     color: darkgray;
 }
 
+.btn {
+    position: absolute;
+    
+}
+
 @media (max-width:600px) {
     .header {
         display: none;
